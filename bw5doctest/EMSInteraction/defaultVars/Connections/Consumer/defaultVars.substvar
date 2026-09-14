@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>SendIntervalInMilliSeconds</name>
+			<value>3000</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1770294418418</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>SendQueueName</name>
+			<value>order.create</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1770704918613</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

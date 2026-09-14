@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pfx="http://www.tibco.com/schemas/EMSInteraction/SharedResources/Schemas/Schema.xsd" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions">
+    <xs:import xmlns:xs="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco.com/schemas/EMSInteraction/SharedResources/Schemas/Schema.xsd" schemaLocation="/SharedResources/Schemas/order.xsd"/>
+    <pd:name>Processes/Consumer/GenerateOrder.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startX>150</pd:startX>
+    <pd:startY>64</pd:startY>
+    <pd:returnBindings>
+        <xsl:copy-of select="$Map-OrderData/pfx:PurchaseOrder"/>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType ref="pfx:PurchaseOrder"/>
+    <pd:endX>450</pd:endX>
+    <pd:endY>64</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1770292222068</pd:targetNamespace>
+    <pd:activity name="Map OrderData">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>301</pd:x>
+        <pd:y>63</pd:y>
+        <config>
+            <element ref="pfx:PurchaseOrder"/>
+        </config>
+        <pd:inputBindings>
+            <pfx:PurchaseOrder>
+                <pfx:OrderID>
+                    <xsl:value-of select="tib:timestamp()"/>
+                </pfx:OrderID>
+                <pfx:OrderDate>
+                    <xsl:value-of select="current-date()"/>
+                </pfx:OrderDate>
+                <pfx:Customer>
+                    <pfx:Name>
+                        <xsl:value-of select="&quot;John&quot;"/>
+                    </pfx:Name>
+                    <pfx:Email>
+                        <xsl:value-of select="&quot;john@earth.org&quot;"/>
+                    </pfx:Email>
+                </pfx:Customer>
+                <pfx:Items>
+                    <pfx:Item>
+                        <pfx:ProductID>
+                            <xsl:value-of select="&quot;42&quot;"/>
+                        </pfx:ProductID>
+                        <pfx:Quantity>
+                            <xsl:value-of select="2"/>
+                        </pfx:Quantity>
+                        <pfx:PricePerUnit>
+                            <xsl:value-of select="1.10"/>
+                        </pfx:PricePerUnit>
+                    </pfx:Item>
+                    <pfx:Item>
+                        <pfx:ProductID>
+                            <xsl:value-of select="&quot;23&quot;"/>
+                        </pfx:ProductID>
+                        <pfx:Quantity>
+                            <xsl:value-of select="1"/>
+                        </pfx:Quantity>
+                        <pfx:PricePerUnit>
+                            <xsl:value-of select="1.99"/>
+                        </pfx:PricePerUnit>
+                    </pfx:Item>
+                </pfx:Items>
+                <pfx:TotalAmount>
+                    <xsl:value-of select="24.00"/>
+                </pfx:TotalAmount>
+            </pfx:PurchaseOrder>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>Map OrderData</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Map OrderData</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

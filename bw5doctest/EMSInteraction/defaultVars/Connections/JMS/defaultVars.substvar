@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>password</name>
+			<value>#!^qY6avILWB/5mD/Pz9I0qdI8pbrUP2c3u</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Password</type>
+			<modTime>1770292858017</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>url</name>
+			<value>tcp://ec2-18-200-217-204.eu-west-1.compute.amazonaws.com:7222</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1770293492682</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>username</name>
+			<value>admin</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1770292858050</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>
