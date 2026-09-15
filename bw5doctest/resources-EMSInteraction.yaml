@@ -13,5 +13,5 @@
 #          api_files_names: []
 #                 db_files: []
 #           db_files_names: []
-#            process_files: ["Processes/ServiceProvider/StoreOrder.process","Processes/ServiceProvider/ReceiveJMSRequest.process","Processes/ServiceConsumer/SendOrder.process","Processes/ServiceConsumer/OrderTrigger.process","Processes/ServiceConsumer/GenerateOrder.process"]
+#            process_files: ["Processes/ServiceConsumer/SendOrder.process","Processes/ServiceConsumer/OrderTrigger.process","Processes/ServiceConsumer/GenerateOrder.process","Processes/ServiceProvider/StoreOrder.process","Processes/ServiceProvider/ReceiveJMSRequest.process"]
 #      process_files_names: ["StoreOrder.process","ReceiveJMSRequest.process","SendOrder.process","OrderTrigger.process","GenerateOrder.process"]   
