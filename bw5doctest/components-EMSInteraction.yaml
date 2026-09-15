@@ -8,7 +8,7 @@
 #         bw5_project_name: "EMSInteraction"
 #  bw5_project_description: 
 #                  repoUrl: "github.com?owner=mcommiss-tibco&repo=bw5doctest"
-#                    owner: "group:default/tibco-self-service"
+#                    owner: "group:default/tibco"
 #                api_files: []
 #          api_files_names: []
 #                 db_files: []
@@ -51,7 +51,7 @@ metadata:
 spec:
     type: bw-5-process
     lifecycle: production
-    owner: group:default/tibco-self-service
+    owner: group:default/tibco
     subcomponentOf: component:default/EMSInteraction
     # system: EMSInteraction
 ---    
@@ -71,7 +71,7 @@ metadata:
 spec:
     type: bw-5-process
     lifecycle: production
-    owner: group:default/tibco-self-service
+    owner: group:default/tibco
     subcomponentOf: component:default/EMSInteraction
     # system: EMSInteraction
 ---    
@@ -91,7 +91,7 @@ metadata:
 spec:
     type: bw-5-process
     lifecycle: production
-    owner: group:default/tibco-self-service
+    owner: group:default/tibco
     subcomponentOf: component:default/EMSInteraction
     # system: EMSInteraction
 ---    
@@ -111,7 +111,7 @@ metadata:
 spec:
     type: bw-5-process
     lifecycle: production
-    owner: group:default/tibco-self-service
+    owner: group:default/tibco
     subcomponentOf: component:default/EMSInteraction
     # system: EMSInteraction
 ---    
@@ -131,7 +131,7 @@ metadata:
 spec:
     type: bw-5-process
     lifecycle: production
-    owner: group:default/tibco-self-service
+    owner: group:default/tibco
     subcomponentOf: component:default/EMSInteraction
     # system: EMSInteraction   
 
